@@ -1,0 +1,18 @@
+.Phonetics button {
+  border: 1px solid #ffd3b6;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: #fcf8f3;
+  transition: all 150ms ease-in-out;
+}
+.Phonetics button:hover {
+  background-color: #ffd3b6;
+}
+.volumeIcon {
+  height: 25px;
+  width: 25px;
+  color: #213458;
+  display: block;
+  margin: 0 auto;
+}

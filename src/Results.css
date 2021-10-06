@@ -7,12 +7,3 @@
 .Results {
   text-align: left;
 }
-.Results button {
-  border: 1px solid pink;
-  border-radius: 100%;
-  padding: 10px 15px;
-  background-color: #fcf8f3;
-}
-.Results button:hover {
-  background-color: #ffd3b6;
-}
