@@ -1,10 +1,24 @@
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 170, 165, 1) 0%,
+    rgba(255, 211, 182, 1) 35%,
+    rgba(252, 248, 243, 1) 100%
+  );
+}
+
 .App {
-  margin: 30px 10px;
+  margin: 30px 30px;
+  font-family: "Lato", sans-serif;
 }
 
 .App-header {
-  text-align: center;
-  font-size: 40px;
+  text-align: left;
+  font-size: 50px;
+  margin: 20px;
+  text-transform: capitalize;
+  font-family: "Playfair Display", serif;
+  color: #213458;
 }
 
 .footer {
@@ -15,9 +29,9 @@
 }
 .githubLink {
   text-decoration: none;
-  color: rgb(241, 142, 158);
+  color: #698474;
   opacity: 1;
 }
 .githubLink:hover {
-  color: rgb(204, 65, 111);
+  color: #085f63;
 }

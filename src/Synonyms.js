@@ -1,5 +1,5 @@
 export default function Synonyms(props) {
-  if (props.synonyms) {
+  if (props.synonyms && props.synonyms.length > 0) {
     return (
       <div className="Synonyms">
         <strong>Synonyms:</strong>
@@ -12,4 +12,3 @@ export default function Synonyms(props) {
     return null;
   }
 }
-// <div className="Synonyms"><strong>Synonyms:</strong>{props}</div>
