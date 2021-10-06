@@ -3,9 +3,15 @@ import "./Dictionary.css";
 import axios from "axios";
 import Results from "./Results";
 
-export default function Dictionary() {
-  let [keyword, setKeyword] = useState("");
+export default function Dictionary(props) {
+  let [keyword, setKeyword] = useState(props.defaultWord);
   let [results, setResults] = useState(null);
+  let [loaded, setLoaded] = useState(false);
+
+  function load() {
+    setLoaded(true);
+    search();
+  }
 
   function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
@@ -23,18 +29,23 @@ export default function Dictionary() {
   function handleKeywordChange(event) {
     setKeyword(event.target.value);
   }
-  return (
-    <div className="Dictionary">
-      <section>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="search"
-            autoFocus="on"
-            onChange={handleKeywordChange}
-          ></input>
-        </form>
-      </section>
-      <Results results={results} />
-    </div>
-  );
+  if (loaded) {
+    return (
+      <div className="Dictionary">
+        <section>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="search"
+              autoFocus="on"
+              onChange={handleKeywordChange}
+            ></input>
+          </form>
+        </section>
+        <Results results={results} />
+      </div>
+    );
+  } else {
+    load();
+    return "Loading...";
+  }
 }
