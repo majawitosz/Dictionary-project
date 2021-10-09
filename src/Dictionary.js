@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Dictionary.css";
 import axios from "axios";
 import Results from "./Results";
+import { FaSistrix } from "react-icons/fa";
 
 export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.defaultWord);
@@ -31,17 +32,26 @@ export default function Dictionary(props) {
   }
   if (loaded) {
     return (
-      <div className="Dictionary">
-        <section>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="search"
-              autoFocus="on"
-              onChange={handleKeywordChange}
-            ></input>
-          </form>
-        </section>
-        <Results results={results} />
+      <div className="container">
+        <div className="Dictionary">
+          <section>
+            <form onSubmit={handleSubmit}>
+              <div className="row">
+                <input
+                  type="search"
+                  autoFocus="on"
+                  onChange={handleKeywordChange}
+                  placeholder="What word you are looking for?"
+                  className="SearchForm form-control col-10"
+                ></input>
+                <button className="searchButton col-2">
+                  <FaSistrix className="searchIcon" />
+                </button>
+              </div>
+            </form>
+          </section>
+          <Results results={results} />
+        </div>
       </div>
     );
   } else {

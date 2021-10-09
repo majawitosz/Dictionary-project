@@ -1,18 +1,46 @@
 .Dictionary {
   text-align: center;
-  margin: 20px 10px;
 }
 .Dictionary section {
   background-color: #fcf8f3;
-  padding: 20px 30px;
+  padding: 25px 30px;
   border-radius: 8px;
   margin: 10px;
   box-shadow: 0px 5px 10px #887575;
 }
-.Dictionary input {
-  width: 100%;
-  border-radius: 10px;
-  border: 1px solid #ffa9a557;
+
+.Dictionary .row {
+  flex-wrap: nowrap;
+}
+.Dictionary .SearchForm {
+  border-radius: 40px;
+  border: 1px solid #213458;
   color: #213458;
   background-color: #fcf8f3;
+  outline: none;
+  height: 40px;
+  padding: 10px;
+  flex-wrap: nowrap;
+}
+.Dictionary .SearchForm::placeholder {
+  opacity: 0.6;
+}
+.Dictionary .searchButton {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #fcf8f3;
+  border: none;
+  transition: all 150ms ease-in-out;
+  position: relative;
+  right: 50px;
+  top: 2px;
+}
+
+.Dictionary .searchIcon {
+  color: #213458;
+  height: 20px;
+  width: 20px;
+  display: block;
+  margin: 0 auto;
 }

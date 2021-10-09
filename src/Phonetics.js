@@ -8,8 +8,7 @@ export default function Phonetics(props) {
           <FaVolumeUp className="volumeIcon" />
         </button>
       </a>
-      <br />
-      {props.phonetics.text}
+      <span className="text">{props.phonetics.text}</span>
     </div>
   );
 }

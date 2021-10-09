@@ -8,20 +8,14 @@ export default function Meaning(props) {
 
       {props.meaning.definitions.map(function (definition, index) {
         return (
-          <div key={index}>
-            <span>
-              <strong>Definition:</strong>
-              {definition.definition}
-              <br />
-              {definition.example && definition.example.length > 0 && (
-                <>
-                  <strong>Example:</strong>
-                  <em>{definition.example}</em>
-                </>
-              )}
-              <br />
-              <Synonyms synonyms={definition.synonyms} />
-            </span>
+          <div key={index} className="ResultsBox">
+            <div className="definition">{definition.definition}</div>
+
+            {definition.example && definition.example.length > 0 && (
+              <div className="example">"{definition.example}"</div>
+            )}
+
+            <Synonyms synonyms={definition.synonyms} />
           </div>
         );
       })}
