@@ -1,5 +1,6 @@
 import "./Phonetics.css";
 import { FaVolumeUp } from "react-icons/fa";
+
 export default function Phonetics(props) {
   return (
     <div className="Phonetics">

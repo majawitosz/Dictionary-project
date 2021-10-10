@@ -6,3 +6,6 @@
 .Photos .row {
   flex-wrap: wrap;
 }
+.ReactAudioPlayer {
+  border: violet;
+}
